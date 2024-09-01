@@ -1,3 +1,5 @@
+Changes in version 1.25.1
++ bug fix: downloadPathwayArchive scrapes "File Name" column
 Changes in version 1.22.0
 + Reimplementation of every function, replacing web service with static JSON
 + getRecentChanges now returns data.frame of pathways per last-edit date 

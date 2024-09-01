@@ -44,7 +44,7 @@ downloadPathwayArchive <- function(date='current',organism=NULL, format=c('gpml'
         if (date == 'current'){ #determine filename
             data.url <- getURL(paste0('https://data.wikipathways.org/current/',format), 
                                followlocation=TRUE, .opts=list(useragent="Mozila 5.0"))
-            curr.files <- readHTMLTable(data.url)[[1]]$Filename
+            curr.files <- readHTMLTable(data.url)[[1]]$`File Name`
             filename <- grep(sub("\\s","_",organism), curr.files, value=TRUE)
             if (length(filename) == 0)
                 stop ('Could not find a file matching your specifications. Try browsing https://data.wikipathways.org.')
